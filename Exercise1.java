@@ -19,7 +19,12 @@ public class Exercise1{
 	
 	public static void biggestNumber(List<Integer> numbers){
 	        Collections.sort(numbers);
-			System.out.println("2.- The biggest number is :"+numbers.get(numbers.size()-1));
+			int biggest = 0;
+			for(int i = 0; i < numbers.size(); i++){
+				if (numbers.get(i) > biggest);
+				biggest = numbers.get(i);
+			}
+			System.out.println("2.- The biggest number is :"+ biggest);
 	}
 	
 	public static void printAscAndDesc(List<String> words){
@@ -37,7 +42,8 @@ public class Exercise1{
 	
 	public static int countLenght(String word){
 		int resultado = 0;
-		resultado = word.length();
+		char words[] = word.toCharArray();
+		for(resultado = 0; resultado <words.length ; resultado++);
         return resultado;		
 	}
 	
@@ -45,7 +51,13 @@ public class Exercise1{
 		
 		public static void smallestNumber(int numbers[]){
 			Arrays.sort(numbers);
-			System.out.println("The smallest number is :"+numbers[0]);
+			int smallest = numbers[numbers.length-1];
+			for(int i = 0; i <numbers.length ;i++){
+				if (numbers[i] < smallest )
+				  smallest = numbers[i];
+			}
+			
+			System.out.println("The smallest number is :"+smallest);
 		}
 		
 		public static void basedValueKey(){
@@ -75,6 +87,7 @@ public class Exercise1{
 		numbers.add(9);
 		numbers.add(34);
 	    numbers.add(2);
+		numbers.add(105);
 		// List of Strings.
 		List<String> words = new ArrayList<>();
 		words.add("Maria");
@@ -101,7 +114,7 @@ public class Exercise1{
 		//Print the List of Strings in ASC and DESC order. 
 	    Exercise1.printAscAndDesc(words);
 		//Print the length of the given string.
-		System.out.println("4.- The length of the given String is : "+Exercise1.countLenght("Hola"));
+		System.out.println("4.- The length of the given String is : "+Exercise1.countLenght("Holaaa"));
 		System.out.println("\nExercise1 Part2.....");
 		System.out.println();
 		//print the smallest number of the Array
